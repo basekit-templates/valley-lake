@@ -7,11 +7,8 @@
 
 <header>
          <div class="wrapper companyheader clearfix">
-            {% if profile.logo|length > 0 %}
             {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
-            {% else %}
             {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
-            {% endif %}
         </div>
 </header>
 
