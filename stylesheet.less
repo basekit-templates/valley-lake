@@ -614,43 +614,56 @@ nav {
    IMAGE WIDGET
    =============================== */
 
-.widget.image img
-{
-    display:block;
-    max-width: 100%;
-    border: 0;
-    border-width: 0;
+
+ .widget.image img {
+  text-align: center;
+  margin: 0 auto 1em;
+  border: 27px solid white;
+  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
+  filter: gray; /* IE6-9 */
+  -webkit-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
+  }
+
+
+ .widget.image img:hover {
+   filter: none;
+  -webkit-filter: grayscale(0%);
+ }
+
+
+ .widget.image .image-title, .feature .widget.image .image-description {
+  width: 286px;
+  margin: 0 auto;
 }
+
 
 .widget.image span.image-title {
-    display: block;
-    margin:10px 0 0;
-    font-family: @font-swatch4-font-family;
-    font-weight: @font-swatch4-font-weight;
-    font-size: @font-swatch4-font-size;
-    color:  @font-swatch4-color;
-    line-height: @font-swatch4-line-height;
-    text-decoration: none;
-}
-
-.widget.image a:hover {
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.widget.image span.image-title:hover {
-  color: lighten(@font-swatch4-color,30%);
-}
+  font-family:@font-swatch8-font-family;
+  font-size:@font-swatch8-font-size;
+  font-weight: @font-swatch8-font-weight;
+  line-height:@font-swatch8-line-height;
+  text-align: center;
+  color: @font-swatch8-color;
+  letter-spacing: @font-swatch8-letter-spacing;
+  
+} 
 
 .widget.image span.image-description {
-    display: block;
-    margin:0 0 10px;
-    font-family: @font-swatch5-font-family;
-    font-weight: @font-swatch5-font-weight;
-    font-size: @font-swatch5-font-size;
-    line-height: @font-swatch5-line-height;
-    color: @font-swatch5-color;
+  font-family:@font-swatch9-font-family;
+  font-size: @font-swatch9-font-size;
+  font-weight: @font-swatch9-font-weight;
+  line-height:@font-swatch9-line-height;
+  text-align: center;
+  color: @font-swatch9-color;
+  letter-spacing: @font-swatch9-letter-spacing;
 }
+
+
+.widget.image span.image-title:hover, .feature .widget.image span.image-description:hover  {
+  color: lighten(@font-swatch4-color,30%);
+  text-decoration: none;
+}
+
 
 /* ===============================
    BUTTON CSS
@@ -1865,7 +1878,7 @@ footer .widget.profile .twitter span {
     padding: 0 2%;
   }
 
-  .bk-pt-gallery  .widget.image img {
+  .bk-pt-gallery  .widget.image img, .widget.image img {
     width: 152px;
     border: 20px solid white;
   }
@@ -1874,12 +1887,12 @@ footer .widget.profile .twitter span {
     width: 172px;
   }
 
-  .bk-pt-gallery .widget.image .image-title {
+  .bk-pt-gallery .widget.image .image-title, .widget.image .image-title {
     font-size:bkscale(@font-swatch4-font-size,0.9);
     line-height:bkscale(@font-swatch4-line-height,0.9); 
   } 
 
-  .bk-pt-gallery  .widget.image .image-description {
+  .bk-pt-gallery  .widget.image .image-description, .widget.image .image-description {
     font-size: bkscale(@font-swatch5-font-size,0.9);
     line-height:bkscale(@font-swatch5-line-height,0.9); 
   } 
@@ -1890,7 +1903,7 @@ footer .widget.profile .twitter span {
 
 @media only screen and (max-width: 660px) { 
 
-  .feature .widget.image img {
+  .feature .widget.image img, .widget.image img {
   border: 15px solid white;
 }
 
@@ -1904,7 +1917,7 @@ footer .widget.profile .twitter span {
     border: 15px solid white;
   }
 
-  .bk-pt-gallery .widget.image .image-title, .bk-pt-gallery .widget.image .image-description {
+  .bk-pt-gallery .widget.image .image-title, .bk-pt-gallery .widget.image .image-description, .widget.image .image-title, .widget.image .image-description {
     width: 140px;
   }
 
@@ -1918,12 +1931,12 @@ footer .widget.profile .twitter span {
     padding: 0 2%;
   }
 
-  .bk-pt-gallery  .widget.image img {
+  .bk-pt-gallery  .widget.image img, .widget.image img  {
     width: 106px;
     border: 15px solid white;
   }
 
-  .bk-pt-gallery .widget.image .image-title, .bk-pt-gallery .widget.image .image-description {
+  .bk-pt-gallery .widget.image .image-title, .bk-pt-gallery .widget.image .image-description, .widget.image .image-title, .widget.image .image-description {
     width: 121px;
   }
 
@@ -2007,11 +2020,11 @@ footer .widget.profile .twitter span {
     margin-bottom: 1em;
   }
 
-  .bk-pt-gallery .widget.image .image-title, .bk-pt-gallery .widget.image .image-description {
+  .bk-pt-gallery .widget.image .image-title, .bk-pt-gallery .widget.image .image-description, .widget.image .image-title, .widget.image .image-description {
     width: 100%;
   }
 
-  .bk-pt-gallery  .widget.image img {
+  .bk-pt-gallery .widget.image img, .widget.image img {
     width: 90%;
     border: 15px solid white;
   }
