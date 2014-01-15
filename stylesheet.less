@@ -256,7 +256,8 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
    =============================== */
 
 header {
-  padding-top: 1em;
+  padding: 1em 0;
+  background-color: transparent;
 }
 
 .header-bg {
@@ -270,15 +271,11 @@ header nav {
   background-color: @color-swatch7;
 }
 
-.companyheader {
-  display: block;
-  padding: 20px 0;
-}
-
 /* COMPANY NAME */
 
 .widget.companyname {
   width: 100%;
+  padding: 20px 0;
   text-align: center;
   letter-spacing: 1px;
 }
@@ -374,22 +371,22 @@ footer h4 {
    EXTENDED NAVIGATION
    =============================== */
 
-
-
 nav {
   background-color: @color-swatch7;
 }
 
-.widget.extendednavigation {
-    text-align: left;
+.widget .extendednavigation {
     position: relative;
+    float: none;
     background-color: @color-swatch7;
+    max-width: 100%;
 }
 
 .widget.extendednavigation ul {
     display: table;
     margin: 0 auto;
     padding: 0;
+    float: none;
 }
 
 .widget.extendednavigation a.pull {

@@ -4,21 +4,14 @@
 
 
 <div class="header-bg">
-
-<header>
-         <div class="wrapper companyheader clearfix">
-            {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
-            {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
-        </div>
-</header>
-
-
-<div class="feature">
-  {{widget('image', 'image', { 'src': asset('images/feature-img.jpg'), 'title': false, 'alt': '', 'fileName': 'feature-img.jpg', 'fileSize': '58kb', 'imageSize': '232 x 232', 'imageWidth': '232px'})|raw}}
+    <header class="clearfix">
+        {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+        {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+    </header>
+    <div class="feature">
+      {{widget('image', 'image', { 'src': asset('images/feature-img.jpg'), 'title': false, 'alt': '', 'fileName': 'feature-img.jpg', 'fileSize': '58kb', 'imageSize': '232 x 232', 'imageWidth': '232px'})|raw}}
+    </div>
 </div>
-
-</div>
-
 
 <nav>
     <div class="wrapper clearfix">
@@ -28,9 +21,8 @@
 
 
 <div class="main wrapper clearfix">
-        {{zone('main')|raw}}
+    {{zone('main')|raw}}
 </div> 
-
 
 <footer>
     <div class="wrapper clearfix">     
