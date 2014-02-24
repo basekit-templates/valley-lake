@@ -6,19 +6,15 @@
 
 
 <div class="header-bg">
-    
     <header>
              <div class="wrapper companyheader clearfix">
                 {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
                 {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
             </div>
     </header>
-
-
     <div class="feature">
       {{widget('image', 'image', { 'src': asset('images/feature-img.jpg'), 'title': false, 'alt': '', 'fileName': 'feature-img.jpg', 'fileSize': '58kb', 'imageSize': '232 x 232', 'imageWidth': '232px'})|raw}}
     </div>
-
 </div>
 
 
@@ -33,7 +29,7 @@
 </div>  
 
 
-<footer>
+<footer class="bk-footer">
     <div class="wrapper clearfix">     
             {{widget('profile', 'footercolumn1profileaddress', { 'profileType':'address', 'address':'profile'})|raw}}  
             {{widget('profile', 'footercolumn1profileEmail', { 'profileType':'email', 'email':'profile'})|raw}}
