@@ -2,6 +2,7 @@
 	"name":"Valley Lake",
 	"thumbnail":"valleylake.png",
 	"screenshot":"valleylake.png",
+	"templateType":"standard",
     "tags": {
     "en": ["minimal", "clean", "photography", "modern", "colorful", "colourful", "flexible", "open", "simple", "hotel", "sans-serif", "holiday", "travel"],
     "es": ["minimalista", "limpio", "fotografico", "moderno", "colorido", "flexible", "abierto", "simple", "hotel", "sans-serif", "vacaciones", "turismo"],
