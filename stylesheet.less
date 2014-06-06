@@ -287,7 +287,6 @@ nav {
 
 .widget .extendednavigation {
     position: relative;
-    float: none;
     background-color: @color-swatch7;
     max-width: 100%;
 }
@@ -302,8 +301,7 @@ nav {
 }
 
 .widget.extendednavigation ul li {
-    float: left;
-    display: block;
+    display: inline-block;
 }
 
 .widget.extendednavigation ul li a {
@@ -337,18 +335,11 @@ nav {
 
 /* FOLDER */
 
-.widget.extendednavigation ul li.folder {
+.widget.extendednavigation ul li.folder, .widget.extendednavigation ul li.folder:hover {
     background-image: image('/images/arrow-down.png');
     background-position: right 29px;
     background-repeat: no-repeat;
     cursor: pointer;
-}
-
-.widget.extendednavigation ul li.folder .text:hover {
-    color: @font-swatch6-color-hover;
-    background-image: image('/images/arrow-down.png');
-    background-position: right 29px;
-    background-repeat: no-repeat;
 }
 
 .widget .extendednavigation ul li:hover ul {
@@ -393,6 +384,8 @@ nav {
 .widget .extendednavigation ul li.folder:after {
     display: none;
 }
+
+
 
 
 /* ===============================
@@ -1862,13 +1855,6 @@ width: 100%;
   .widget.extendednavigation ul li a:hover, .widget.extendednavigation ul li.folder .text:hover {
     background-color: transparent;
   }
-
-.widget.extendednavigation ul li.folder .text:hover {
-    color: @font-swatch6-color-hover;
-    background-image: image('/images/arrow-down.png');
-    background-position: right 13px;
-    background-repeat: no-repeat;
-}
 
 
   .widget.extendednavigation ul li > ul {
