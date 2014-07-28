@@ -304,6 +304,11 @@ nav {
     display: inline-block;
 }
 
+.widget.extendednavigation ul li, .widget.extendednavigation ul li.folder {
+  padding: 0;
+  margin: 0;
+}
+
 .widget.extendednavigation ul li a {
     display: block;
     padding: 18px 20px;
@@ -335,19 +340,14 @@ nav {
 
 /* FOLDER */
 
-.widget.extendednavigation ul li.folder, .widget.extendednavigation ul li.folder:hover {
-    background-image: image('/images/arrow-down.png');
-    background-position: right 29px;
-    background-repeat: no-repeat;
-    cursor: pointer;
+.widget.extendednavigation ul li.folder:after, .widget.extendednavigation ul li.folder:hover:after {
+  right: 10px;
+  top: 46%;
 }
 
 .widget .extendednavigation ul li:hover ul {
   background-color: @color-swatch7;
-}
-
-.widget.extendednavigation ul li.folder > ul > li .text:hover {
-  background-image: none;
+  margin-top: 0;
 }
 
 
@@ -381,11 +381,18 @@ nav {
     padding: 0;
 }
 
-.widget .extendednavigation ul li.folder:after {
-    display: none;
+// Selected state
+
+.extendednavigation ul li.selected, .extendednavigation ul li:hover ul li.selected, .extendednavigation ul li.folder.selected ul li.selected, .extendednavigation ul li.folder.selected {
+    a, .text {
+        color: @font-swatch6-color;
+        background-color: @font-swatch6-background-color-hover;
+    }
 }
 
-
+.extendednavigation ul li.folder.selected ul li .text {
+    color: @font-swatch6-color;
+}
 
 
 /* ===============================
@@ -1803,16 +1810,16 @@ width: 100%;
 
   .widget.extendednavigation ul li {
     border-bottom: 1px solid @color-swatch1;
-    padding: 16px;
     background-color: @color-swatch7;
-    text-align: center;
+  }
+
+  .widget.extendednavigation ul li .widget.extendednavigation ul li.folder {
+      padding: 0;
   }
 
    .widget.extendednavigation ul li:first-child {
     border-top: 1px solid @color-swatch1;
    }
-
-
 
    .widget.extendednavigation ul li:last-child {
     border-bottom: none;
@@ -1838,19 +1845,22 @@ width: 100%;
   padding-bottom: 0;
 }
 
-  .widget.extendednavigation ul li.folder {
-    padding: 16px;
-  }
-
   .widget .extendednavigation li {
     width: 100%;
     padding: 0;
   }
 
-  .widget.extendednavigation ul li a, .widget.extendednavigation ul li.folder .text {
-      padding: 5px;
+  div.widget .extendednavigation ul.align-right, div.widget.extendednavigation ul.align-right {
+    li.folder .text {
+    padding: 10px 25px 10px 10px;
+  }
+}
+
+  .widget.extendednavigation ul li a, .widget.extendednavigation ul li.folder .text , .widget.extendednavigation ul li.folder ul li .text {
+      padding: 10px;
       margin: 0;
   }
+
 
   .widget.extendednavigation ul li a:hover, .widget.extendednavigation ul li.folder .text:hover {
     background-color: transparent;
@@ -1864,14 +1874,11 @@ width: 100%;
   .widget.extendednavigation ul li:hover > ul {
       display: block !important;
       width: 100%;
-      position: relative;
-      z-index: 500;
-      margin-top: 18px;
-      background-color: lighten(@color-swatch7,5%);
   }
 
   .widget.extendednavigation ul li:hover > ul > li {
      border-bottom: 1px solid @color-swatch1;
+      background-color: darken(@color-swatch7,5%);
   }
 
   .widget.extendednavigation ul li:hover > ul > li .text {
@@ -1890,12 +1897,7 @@ width: 100%;
     border-radius: 0;
   }
 
-  .widget.extendednavigation ul li:hover > ul li:first-child {
-    padding-top: 16px;
-  }
-
     .widget.extendednavigation ul li:hover > ul li:last-child {
-    padding-top: 16px;
     border-bottom: none;
   }
 
