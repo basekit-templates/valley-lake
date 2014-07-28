@@ -37,6 +37,9 @@ blockquote:before {
 
 .main {
     padding: 2em 0;
+    .widget {
+      clear: both;
+    }
 }
 
 body.edit .widget.navigation, body.edit .widget.extendednavigation {
@@ -393,9 +396,6 @@ nav {
     a, .text {
         color: @font-swatch6-color;
         background-color: @color-swatch1;
-        @media @tablet {
-          background-color: @font-swatch6-background-color-hover;
-        }
     }
 }
 
