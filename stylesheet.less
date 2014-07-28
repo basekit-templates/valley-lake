@@ -337,6 +337,13 @@ nav {
     text-decoration: none;
 }
 
+
+.extendednavigation ul li.selected, .extendednavigation ul li.selected, .extendednavigation ul li:hover ul li.selected, .extendednavigation ul li:hover ul li.selected, .extendednavigation ul li.folder.selected ul li.selected, .extendednavigation ul li.folder.selected ul li.selected, .extendednavigation ul li.folder.selected, .extendednavigation ul li.folder.selected {
+  &:hover a, &:hover .text {
+    background-color: @font-swatch6-background-color-hover;
+  }
+}
+
 /* FOLDER */
 
 .widget.extendednavigation ul li.folder:after, .widget.extendednavigation ul li.folder:hover:after {
