@@ -386,7 +386,10 @@ nav {
 .extendednavigation ul li.selected, .extendednavigation ul li:hover ul li.selected, .extendednavigation ul li.folder.selected ul li.selected, .extendednavigation ul li.folder.selected {
     a, .text {
         color: @font-swatch6-color;
-        background-color: @font-swatch6-background-color-hover;
+        background-color: @color-swatch1;
+        @media @tablet {
+          background-color: @font-swatch6-background-color-hover;
+        }
     }
 }
 
@@ -1789,11 +1792,12 @@ width: 100%;
     .widget .extendednavigation a.pull:after {
     content:"";
     background: image('/images/nav-icon.png') no-repeat;
-    width: 30px;
-    height: 30px;
+    width: 18px;
+    height: 18px;
     display: inline-block;
     position: absolute;
-    right: 0;
+    right: 50%;
+    margin-right: -9px;
     top: 0;
     box-shadow: none;
   }
