@@ -1397,9 +1397,12 @@ color: @color-swatch1;
     padding: 0;
 }
 
+.blogsearch {
+  text-align: center;
+  margin: 1em 0;
+}
+
 .widget.profile fieldset label, .widget.signupform fieldset label, .blog-search-form label {
-    width: 100%;
-    float: left;
     font-family:@font-swatch5-font-family;
     font-size:@font-swatch5-font-size;
     font-weight:@font-swatch5-font-weight;
@@ -1409,22 +1412,23 @@ color: @color-swatch1;
 }
 
 .widget.profile form fieldset input, .widget.signupform fieldset input, .blogsearch form input {
-    height: 40px;
-    width: 100%;
+    height: 45px;
+    width: 35%;
     border: 1px solid @color-swatch4;
     background-color: @color-swatch1;
     font-family: @font-swatch5-font-family;
     font-size: @font-swatch5-font-size;
     color: @color-swatch5;
     text-indent: 8px;
-    margin-top: 6px;
-    margin-bottom: 5px;
-    float:left;
+    margin: 0 5px 5px 0;
     padding: 0;
+    @media @mobile {
+        width: 100%;
+    }
 }
 
 .widget.profile fieldset button.btn, .widget.signupform fieldset button.btn, .blogsearch form button  {
-    padding: 16px 20px;
+    padding: 9px 20px 14px;
     margin: 0;
     border: none;
     background-color: lighten(@color-swatch5,30%);
@@ -1435,6 +1439,10 @@ color: @color-swatch1;
     color: @font-swatch7-color;
     text-decoration: none;
     letter-spacing: 1px;
+    @media @mobile {
+      width: 100%;
+      padding: 16px 20px;
+    }
 }
 
 .widget.profile fieldset button.btn:hover, .widget.signupform fieldset button.btn:hover, .blogsearch form button:hover {
