@@ -620,111 +620,50 @@ hr.line.align-right {
    GALLERY WIDGET
    =============================== */
 
-.widget.gallery
-{
-}
-
-.widget.gallery ul {
-    display:block;
-    margin: 0;
-    padding:0px;
-    list-style: none;
-}
-
-.widget.gallery li {
-    float: left;
-    position: relative;
-    width: 33.3%;
-    padding-bottom: 33%;
-    list-style-type: none;
-}
-
-.widget.gallery li  span.inner {
-    background-position:center center;
-    background-repeat:no-repeat;
-    background-color: @color-swatch1;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-
-.widget.gallery ul li.one-to-one span.inner
-{
-    background-size:100% 100%;
-}
-
-.widget.gallery ul li.portrait span.inner
-{
-    background-size:100% auto;
-}
-
-.widget.gallery ul li.landscape span.inner
-{
-    background-size:auto 100%;
-}
-
-.widget.gallery li span.inner {
-    position: absolute;
-    left: 5px;
-    right: 5px;
-    top: 0px;
-    bottom: 16px;
-    overflow: hidden;
-}
-
-.widget.gallery li span.inner img {
-    display:none;
-}
-
-.widget.gallery ul:before,
-.widget.gallery ul:after {
-  content: " ";
-  display: table;
-}
-.widget.gallery ul:after {
-  clear: both;
-}
-.widget.gallery ul {
-  *zoom: 1;
-}
-
-.widget.gallery li span.inner .title, .widget.gallery li span.inner .description {
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    margin-bottom: -310px;
-    max-height: 284px;
-    background:@color-swatch1;
-    background: rgba(255,255,255,0.9);
-    padding: 10px;
-    text-align: center;
-    -webkit-transition: all 0.3s ease-out;
-    -moz-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out;
-    font-family:@font-swatch5-font-family;
-    font-size:@font-swatch5-font-size;
-    font-weight: @font-swatch5-font-weight;
-    line-height:@font-swatch5-line-height;
-    color:darken(@font-swatch5-color,40%);
-    letter-spacing: @font-swatch5-letter-spacing;
-}
-.widget.gallery li span.inner:hover .title {
-   margin-bottom: 0;
-}
-
-.widget.gallery li span.inner .description {
-  display: none;
-}
-
-.widget.gallery li span.inner a {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+.widget.gallery {
+    margin: 20px 0 20px -0.5%;
+    ul li {
+        @media @tablet {
+            width: 50%;
+            padding-bottom: 50%;
+        }
+        @media @mobile {
+            width: 100%;
+            padding-bottom: 100%;
+        }
+        span.inner {
+            .title,
+            .description {
+                // Font
+                color: @color-swatch1;
+                font-family: @font-swatch4-font-family;
+                letter-spacing: @font-swatch4-letter-spacing;
+                text-align: left;
+            }
+            .title {
+                font-size: 19px;
+                font-weight: 600;
+                line-height: 26px;
+            }
+            .description {
+                font-size: 16px;
+                line-height: 20px;
+            }
+        }
+    }
+    // Image Data
+    .image-data {
+        display: block;
+        opacity: 0;
+        background-color: @color-swatch4;
+        -webkit-transition: all 0.4s ease-out;
+        -moz-transition: all 0.4s ease-out;
+        -o-transition: all 0.4s ease-out;
+        transition: all 0.4s ease-out;
+        &:hover {
+            opacity: 1;
+        }
+    }
 }
 
 /* Lightbox */
@@ -740,8 +679,6 @@ hr.line.align-right {
 .lb-data .lb-number {
   font-size:bkscale(@font-swatch5-font-size,0.9);
 }
-
-
 
 /* =======================================
    CLICK TO CALL
@@ -1427,8 +1364,26 @@ color: @color-swatch1;
     }
 }
 
-.widget.profile fieldset button.btn, .widget.signupform fieldset button.btn, .blogsearch form button  {
+.widget.profile fieldset button.btn, .blogsearch form button  {
     padding: 9px 20px 14px;
+    margin: 0;
+    border: none;
+    background-color: lighten(@color-swatch5,30%);
+    font-family: @font-swatch7-font-family;
+    font-size: @font-swatch7-font-size;
+    font-weight:@font-swatch7-font-weight;
+    background-color: @font-swatch7-background-color;
+    color: @font-swatch7-color;
+    text-decoration: none;
+    letter-spacing: 1px;
+    @media @mobile {
+      width: 100%;
+      padding: 16px 20px;
+    }
+}
+
+.widget.signupform fieldset button.btn {
+    padding: 5px 20px 12px;
     margin: 0;
     border: none;
     background-color: lighten(@color-swatch5,30%);
@@ -1936,20 +1891,21 @@ footer.blog-post-metadata time {
    ====================================== */
 
 .widget.ecomproductslist {
-  margin: 3em 0;
+  margin: 3em 0 3em -3em;
+  @media @tablet {
+    margin-left: 0;
+  }
     .productlist-filter {
         margin-bottom: 1em;
+        @media @tablet {
+          margin-left: 0;
+        }
         @media @mobile {
             margin: 0;
         }
         label {
           display: block;
-        }
-        label[for=productlist-itemcount] {
-          display: inline-block;
-          @media @tablet {
-            display: block;
-          }
+          padding-left: 3px;
         }
     }
 }
@@ -1978,7 +1934,7 @@ select[name="displayCount"] {
 
 .productlist-search {
   input {
-      height: 42px;
+      height: 35px;
       border: 1px solid @color-swatch4;
       background-color: @color-swatch1;
       font-family: @font-swatch5-font-family;
@@ -1995,7 +1951,7 @@ select[name="displayCount"] {
       }
   }
   .btn {
-        padding: 6px 20px 13px;
+        padding: 3px 20px 9px;
         margin: 0;
         border: none;
         font-family: @font-swatch7-font-family;
@@ -2011,9 +1967,10 @@ select[name="displayCount"] {
         }
         @media @tablet {
           display: block;
+          padding: 16px 20px;
         }
         @media @mobile {
-            padding: 8px 14px;
+          width: 100%;
         }
   }
 }
@@ -2348,8 +2305,6 @@ left: inherit !important;
 
 }
 
-
-
 /* ===============================
    IPHONE WIDTH
    =============================== */
@@ -2511,18 +2466,6 @@ left: inherit !important;
   .widget.responsiveslideshow .slideshow-image-list, .widget.responsiveslideshow .slideshow-widget {
       height: 200px;
   }
-
-     /* GALLERY */
-
-    .widget.gallery li span.inner .title, .widget.gallery li span.inner .description {
-      max-height: 150px;
-    }
-
-    .widget.gallery ul.gallery-widget li
-    {
-      width: 50%;
-      padding-bottom: 50%;
-    }
 
 }
 
