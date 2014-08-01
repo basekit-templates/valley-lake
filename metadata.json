@@ -113,7 +113,7 @@
             "font-family": "\"Oswald\", Arial, sans-serif",
             "font-size": "15px",
             "font-weight": "200",
-            "line-height": "24px",
+            "line-height": "25px",
             "color": "@color-swatch1",
             "letter-spacing": "inherit",
             "background-color": "@color-swatch3",
