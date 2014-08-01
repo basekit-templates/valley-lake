@@ -636,18 +636,20 @@ hr.line.align-right {
             .description {
                 // Font
                 color: @color-swatch1;
-                font-family: @font-swatch4-font-family;
-                letter-spacing: @font-swatch4-letter-spacing;
                 text-align: left;
             }
             .title {
                 font-size: 19px;
                 font-weight: 600;
                 line-height: 26px;
+                font-family: @font-swatch4-font-family;
+                letter-spacing: @font-swatch4-letter-spacing;
             }
             .description {
-                font-size: 16px;
+                font-size: 15px;
                 line-height: 20px;
+                font-family: @font-swatch5-font-family;
+                letter-spacing: @font-swatch5-letter-spacing;
             }
         }
     }
@@ -1349,7 +1351,7 @@ color: @color-swatch1;
 }
 
 .widget.profile form fieldset input, .widget.signupform fieldset input, .blogsearch form input {
-    height: 45px;
+    height: 43px;
     width: 35%;
     border: 1px solid @color-swatch4;
     background-color: @color-swatch1;
@@ -1364,39 +1366,27 @@ color: @color-swatch1;
     }
 }
 
-.widget.profile fieldset button.btn, .blogsearch form button  {
-    padding: 9px 20px 14px;
+.widget.signupform fieldset button.btn, .widget.profile fieldset button.btn, .blogsearch form button  {
+    height: 43px;
+    padding: 9px 20px 9px;
+    position: relative;
+    top: 3px;
     margin: 0;
     border: none;
     background-color: lighten(@color-swatch5,30%);
     font-family: @font-swatch7-font-family;
-    font-size: @font-swatch7-font-size;
+    font-size: 15px;
+    line-height: 25px;
     font-weight:@font-swatch7-font-weight;
     background-color: @font-swatch7-background-color;
     color: @font-swatch7-color;
     text-decoration: none;
     letter-spacing: 1px;
     @media @mobile {
-      width: 100%;
       padding: 16px 20px;
-    }
-}
-
-.widget.signupform fieldset button.btn {
-    padding: 5px 20px 12px;
-    margin: 0;
-    border: none;
-    background-color: lighten(@color-swatch5,30%);
-    font-family: @font-swatch7-font-family;
-    font-size: @font-swatch7-font-size;
-    font-weight:@font-swatch7-font-weight;
-    background-color: @font-swatch7-background-color;
-    color: @font-swatch7-color;
-    text-decoration: none;
-    letter-spacing: 1px;
-    @media @mobile {
-      width: 100%;
-      padding: 16px 20px;
+      position: inherit;
+      top: 0;
+      height: auto;
     }
 }
 
@@ -1553,7 +1543,8 @@ color: @color-swatch1;
     }
 }
 
-.blog-list-footer a.blog-post-pagination-page {
+.blog-list-footer {
+  a.blog-post-pagination-page {
       padding: 16px 20px;
       margin: 0;
       border: none;
@@ -1568,6 +1559,10 @@ color: @color-swatch1;
       background-color: @font-swatch7-background-color-hover;
       cursor: pointer;
     }
+  }
+  @media @mobile {
+    padding-top: 1em;
+  }
 }
 
 /* ===============================
@@ -1951,11 +1946,14 @@ select[name="displayCount"] {
       }
   }
   .btn {
-        padding: 3px 20px 9px;
+        height: 35px;
+        padding: 3px 20px 3px;
+        position: relative;
+        top:3px;
         margin: 0;
         border: none;
         font-family: @font-swatch7-font-family;
-        font-size: @font-swatch7-font-size;
+        font-size: 15px;
         font-weight:@font-swatch7-font-weight;
         background-color: @font-swatch7-background-color;
         color: @font-swatch7-color;
@@ -1968,9 +1966,9 @@ select[name="displayCount"] {
         @media @tablet {
           display: block;
           padding: 16px 20px;
-        }
-        @media @mobile {
-          width: 100%;
+          position: inherit;
+          top: 0;
+          height: auto;
         }
   }
 }
@@ -2063,6 +2061,20 @@ select[name="displayCount"] {
     @media @mobile {
         margin: 20px 0;
     }
+}
+
+.widget.ecomproduct .ecom-product .btn.ecom-product-add-to-cart-btn, a.ecom-product-go-to-checkout-btn {
+  padding: 16px 20px;
+  margin-bottom: 10px;
+  &:hover {
+    background-color: @font-swatch7-background-color-hover;
+  }
+}
+
+a.ecom-product-go-to-checkout-btn {
+    float: left;
+    margin-bottom: 20px;
+    text-decoration: none;
 }
 
 
