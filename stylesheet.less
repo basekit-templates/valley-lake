@@ -505,6 +505,10 @@ nav {
     border-width: 0;
 }
 
+.widget.image span img {
+  display: block;
+}
+
 .widget.image span.image-title {
     display: block;
     margin:10px 0 0;
@@ -801,7 +805,8 @@ ul.twitter {
    CONTACT FORM WIDGET
    =============================== */
 
-.widget.contactform form {
+.widget.contactform form,
+.advancedcontactform form {
     display: block;
     margin-bottom: 20px;
     background-color: transparent;
@@ -823,7 +828,8 @@ ul.twitter {
     letter-spacing: @font-swatch5-letter-spacing;
 }
 
-.widget.contactform fieldset input {
+.widget.contactform fieldset input,
+.advancedcontactform input {
     height: 40px;
     width: 100%;
     border: 1px solid @color-swatch4;
@@ -842,7 +848,8 @@ ul.twitter {
     box-shadow: 0 0 5px @color-swatch7;
 }
 
-.widget.contactform fieldset textarea {
+.widget.contactform fieldset textarea,
+.advancedcontactform textarea {
     height: 100px;
     width: 100%;
     border: 1px solid @color-swatch4;
@@ -863,7 +870,8 @@ ul.twitter {
     box-shadow: 0 0 5px @color-swatch7;
 }
 
-.widget.contactform fieldset button.btn {
+.widget.contactform fieldset button.btn,
+.advancedcontactform button {
     padding: 16px 20px;
     margin: 0;
     border: none;
@@ -876,7 +884,8 @@ ul.twitter {
     letter-spacing: 1px;
 }
 
-.widget.contactform fieldset button.btn:hover {
+.widget.contactform fieldset button.btn:hover,
+.advancedcontactform button:hover {
   background-color: @font-swatch7-background-color-hover;
   cursor: pointer;
 }
