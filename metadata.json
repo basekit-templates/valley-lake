@@ -3,6 +3,7 @@
 	"thumbnail":"valleylake.png",
 	"screenshot":"valley-lake-screenshot.jpg",
 	"templateType":"standard",
+    "versionTenCompatible": 1,
     "tags": {
     "en": ["minimal", "clean", "photography", "modern", "colorful", "colourful", "flexible", "open", "simple", "hotel", "sans-serif", "holiday", "travel"],
     "es": ["minimalista", "limpio", "fotografico", "moderno", "colorido", "flexible", "abierto", "simple", "hotel", "sans-serif", "vacaciones", "turismo"],
